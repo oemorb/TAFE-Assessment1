@@ -229,14 +229,15 @@ main {
 .contact {
     display: flex;
     width: auto;
-    /* border: 1px solid black; */
-    justify-content: space-between;
+    border: 1px solid black;
+    padding: 20px 0px;
 }
 
-iframe {
-    width: 400; 
-    height: 250;
+.map {
+    margin-left: auto;
 }
+
+
 
 /* ---------------------------- TESTMONIALS PAGE ---------------------------- */
 
@@ -250,7 +251,7 @@ iframe {
 }
 
 .testimonials p  {
-    line-height: 2;
+    line-height: 1.5;
     font-style: italic;
 }
 
