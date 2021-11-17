@@ -28,21 +28,28 @@ nav .links {
     height: auto;
     margin-left: 0em;
     padding-top: 0.5em;
-
-    
-    /* background-color: blue; */
+    transition: 0.7s;
 }
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
 .links a {
     color: #4d1d18;
     text-decoration: none;
     text-align: center;
+    transition: 0.7s;
 
 }
 
 .links a:hover {
     color: #555;
     font-weight: bold;
+    transform: scale(1.05);
 }
+
+
 
 /* --------------------------------- FOOTER --------------------------------- */
 .footer {
@@ -215,4 +222,38 @@ main {
 .apartmenttext img {
     margin: auto;
     border-radius: 10px;
+}
+
+/* ----------------------------- CONTACT US PAGE ---------------------------- */
+
+.contact {
+    display: flex;
+    width: auto;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+}
+
+iframe {
+    width: 400; 
+    height: 250;
+}
+
+/* ---------------------------- TESTMONIALS PAGE ---------------------------- */
+
+.testpic {
+    width: 80vw;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.testimonials p  {
+    line-height: 2;
+    font-style: italic;
+}
+
+.testimonials p:nth-child(2n) {
+    text-align: right;
 }
