@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylev2.css">
     <title>Navigation</title>
+    <script>
+const current = 0;
+for (var i = 0; i < document.links.length; i++) {
+    if (document.links[i].href === document.URL) {
+        current = i;
+    }
+}
+document.links[current].className = 'current';
+    </script>
 </head>
 <body>
     <nav>
             <ul class="content">
             <li><a href='index.html'><img class='logo' src="/images/sorrento_by_the_sea_logo.jpg"></li> 
-            <div class="links">
+            <div id="links">
             <li><a href='companyinfo.html'>Company Information</li>        
             <li><a href='theapartment.html'>The Apartment</li>
             <li><a href='contact.html#directions'>Directions</li>

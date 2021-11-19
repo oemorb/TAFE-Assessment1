@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     background-color: rgb(144, 192, 130, 0.2);
+        /* background-color: rgb(102,47,45, 0.3); */
     justify-content: space-between;
     /* border: 1px solid black; */
     list-style-type: none;
@@ -12,7 +13,7 @@
     padding: 0.5em 1em;
 }
 
-nav .links {
+nav #links {
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -35,18 +36,21 @@ nav .links {
     transform: scale(1.05);
 }
 
-.links a {
+#links a {
     color: #4d1d18;
     text-decoration: none;
     text-align: center;
-    transition: 0.7s;
-
 }
 
-.links a:hover {
+#links a:hover {
     color: #555;
     font-weight: bold;
     transform: scale(1.05);
+}
+
+.current {
+    color: #555;
+    font-weight: bold;
 }
 
 
@@ -55,7 +59,8 @@ nav .links {
 .footer {
         display: flex;
         flex-direction: row;
-        background-color: rgb(144, 192, 130, 0.3);
+        /* background-color: rgb(144, 192, 130, 0.3); */
+        background-color: rgb(102,47,45, 0.3);
         padding: 0.5em 0;
         justify-content: space-evenly;
         /* border: 1px solid black; */
@@ -67,7 +72,7 @@ nav .links {
 .footer img:hover {
     opacity: 0.7;
 }
-/* font */
+ /* ---------------------------------- font ---------------------------------- */
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -95,18 +100,22 @@ color: #4d1d18;
 font-size: 24px;
 }
 
-/* layout */
+/* --------------------------------- layout --------------------------------- */
 
 body {
-    background-image: linear-gradient(140deg,#d4a45c,white, #68a7a3, #6a9693);
-    height: auto;
+    /* background-image: linear-gradient(140deg,#d4a45c,white, #68a7a3, #6a9693); */
+    /* height: auto;
     width: 99%;
     background-attachment: fixed;
-    background-size: no-repeat;
+    background-size: no-repeat; */
+    background-color: #C7BFB5;
 }
 
 main {
     padding: 0 1em;
+    background-color: rgb(255, 255, 255, 0.2);
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 /* -------------------------------- HOMEPAGE -------------------------------- */
@@ -118,12 +127,9 @@ main {
         "a a c c"
         "d f e e"
         "g g e e";
-    margin: 1em 0em;
     height: auto;
     width: auto;
-    min-height: 100vh;
     grid-gap: 20px;
-    padding: 1em 0em;
 
 }
 
@@ -131,7 +137,7 @@ main {
     border: 2px solid rgb(214, 223, 90, 0.2);
     cursor:pointer;
     transition:.7s;
-    background-color:rgba(255, 255, 255, 0.3);
+    background-color:rgba(255, 255, 255, 0.7);
     padding-left: 1em;
     border-radius: 10px;
     overflow: hidden ;
@@ -228,21 +234,27 @@ main {
 
 .contact {
     display: flex;
+    flex-direction: row;
     width: auto;
-    border: 1px solid black;
     padding: 20px 0px;
+    justify-content: space-evenly;
 }
 
 .map {
     margin-left: auto;
 }
 
+.gettinghere {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
 
 
 /* ---------------------------- TESTMONIALS PAGE ---------------------------- */
 
 .testpic {
-    width: 80vw;
+    width: 95vw;
     height: auto;
     margin: auto;
     display: block;
@@ -253,8 +265,64 @@ main {
 .testimonials p  {
     line-height: 1.5;
     font-style: italic;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .testimonials p:nth-child(2n) {
     text-align: right;
 }
+
+.testimonials p:before {
+content: open-quote;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size:40px;
+}
+
+.testimonials p:after {
+    content: close-quote;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:40px;
+    }
+
+    /* -------------------------------- FEES PAGE ------------------------------- */
+
+    .booknow {
+        background-color: rgb(255, 255, 255,0.7);
+        border: none;
+        border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 12px 1px;
+        margin-bottom: 20px;
+        width: 180px;
+        transition: .7s;
+        font-size: 18px;
+    }
+
+    .booknow:hover {
+        background-color: white;
+        border-width: 2px;
+        border-color: white;
+        font-weight: bold;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    .season {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tandc p {
+        font-style: italic;
+
+    }
+    
+    .feepage main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
