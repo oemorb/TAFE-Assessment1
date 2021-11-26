@@ -4,9 +4,7 @@
     display: flex;
     flex-direction: row;
     background-color: rgb(144, 192, 130, 0.2);
-        /* background-color: rgb(102,47,45, 0.3); */
     justify-content: space-between;
-    /* border: 1px solid black; */
     list-style-type: none;
     align-items: center;
     margin: -1em -1em;
@@ -18,7 +16,6 @@ nav #links {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid black; */
     width: 60vw;
     margin-left: auto; 
 }
@@ -48,7 +45,7 @@ nav #links {
     transform: scale(1.05);
 }
 
-.current {
+.active {
     color: #555;
     font-weight: bold;
 }
@@ -59,16 +56,33 @@ nav #links {
 .footer {
         display: flex;
         flex-direction: row;
-        /* background-color: rgb(144, 192, 130, 0.3); */
         background-color: rgb(102,47,45, 0.3);
         padding: 0.5em 0;
-        justify-content: space-evenly;
-        /* border: 1px solid black; */
+        justify-content: space-between;
         list-style-type: none;
         align-items: center;
         margin: 0.5em -1em -1em -1em;
 }
 
+.footerlinks {
+    margin-left: 2em;
+}
+.footerlinks a {
+    font-size: 10px;
+    text-align: center;
+    color: black;
+}
+
+.footerlinks p {
+    font-size: 12px;
+}
+.footericons {
+    margin-right: 2em;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+}
 .footer img:hover {
     opacity: 0.7;
 }
@@ -103,11 +117,6 @@ font-size: 24px;
 /* --------------------------------- layout --------------------------------- */
 
 body {
-    /* background-image: linear-gradient(140deg,#d4a45c,white, #68a7a3, #6a9693); */
-    /* height: auto;
-    width: 99%;
-    background-attachment: fixed;
-    background-size: no-repeat; */
     background-color: #C7BFB5;
 }
 
@@ -145,6 +154,7 @@ main {
 }
 
 .hometext div:hover {
+    border: 2px solid rgb(214, 223, 90, 0.5);
     transform: scale(1.05);
     color: #555;
 }
@@ -180,10 +190,12 @@ main {
 
 .directions {
     grid-area: f;
+    padding-bottom: 15px;
 }
 
 .contactus {
     grid-area: g;
+    padding-bottom: 15px;
 }
 
 .fees {
@@ -199,6 +211,21 @@ main {
     height: auto;
 }
 
+/* ------------------------ COMPANY INFORMATION PAGE ------------------------ */
+
+.aboutus {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    text-align: justify;
+}
+
+.aboutus img {
+    object-fit:contain;
+    height: 24em;
+    align-self: center;
+    border-radius: 10px;
+}
 /* --------------------------- THE APARTMENT PAGE --------------------------- */
 .apartmenttext {
     display: grid;
@@ -207,6 +234,9 @@ main {
     "c d"
     "e f"
     "g g";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em 1em;
+    align-items: center;
 }
 
 .apartmentlist {
@@ -230,26 +260,135 @@ main {
     border-radius: 10px;
 }
 
-/* ----------------------------- CONTACT US PAGE ---------------------------- */
-
-.contact {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    padding: 20px 0px;
-    justify-content: space-evenly;
+/* -------------------------- LOCAL ACTIVITIES PAGE ------------------------- */
+.localtext {
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "c d"
+    "e f"
+    "g h";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em 1em;
+    align-items: center;
 }
 
-.map {
+.localarea1 {
+    grid-area: a;
+}
+
+.localpic1 {
+    grid-area: b;
+}
+
+.localarea2 {
+    grid-area: d;
+}
+
+.localpic2 {
+    grid-area: c;
+}
+
+.localarea3 {
+    grid-area: e;
+}
+
+.localpic3 {
+    grid-area: f;
+}
+
+.localarea4 {
+    grid-area: h;
+}
+
+.localpic4 {
+    grid-area: g;
+}
+/* Local Activities Images */
+.localtext img {
+    object-fit: fit;
+    border-radius: 10px;
+    margin: auto;
+    width: 500px;
+    height: auto;
+}
+
+/* -------------------------------- FEES PAGE ------------------------------- */
+
+.booknow {
+    background-color: rgb(255, 255, 255,0.7);
+    border: none;
+    border: 2px solid rgb(214, 223, 90, 0.4);
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px 1px;
+    margin-bottom: 20px;
+    width: 180px;
+    transition: .7s;
+    font-size: 18px;
+}
+
+.booknow:hover {
+    background-color: white;
+    border: 3px solid rgb(214, 223, 90, 0.4);
+    font-weight: bold;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.season button {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgb(214, 223, 90, 0.4);
     margin-left: auto;
+    height: 7em;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
+    transition: .7s;
 }
 
-.gettinghere {
+.season button:hover {
+    background-color: white;
+    border-width: 3px;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.season {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-items: center;
+    margin: auto;
+    align-items: center;
+}
+
+.season1 {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    width: 40vw;
+    align-items: center;
 }
 
+.tandc {
+    padding-bottom: 20px;
+}
+.tandc p {
+    font-style: italic;
+
+}
+
+button a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    padding: 2px;
+}
 
 /* ---------------------------- TESTMONIALS PAGE ---------------------------- */
 
@@ -266,6 +405,7 @@ main {
     line-height: 1.5;
     font-style: italic;
     background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgb(214, 223, 90, 0.5);
     border-radius: 10px;
     padding: 10px;
 }
@@ -288,41 +428,72 @@ font-size:40px;
     font-size:40px;
     }
 
-    /* -------------------------------- FEES PAGE ------------------------------- */
-
-    .booknow {
-        background-color: rgb(255, 255, 255,0.7);
-        border: none;
-        border-radius: 30px;
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 12px 1px;
-        margin-bottom: 20px;
-        width: 180px;
-        transition: .7s;
-        font-size: 18px;
-    }
-
-    .booknow:hover {
-        background-color: white;
-        border-width: 2px;
-        border-color: white;
-        font-weight: bold;
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-
-    .season {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .tandc p {
-        font-style: italic;
-
-    }
     
-    .feepage main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* ----------------------------- CONTACT US PAGE ---------------------------- */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 20px 0px;
+    justify-content: space-evenly;
+}
+
+.map {
+    margin-left: auto;
+}
+
+.gettinghere {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* contact form */
+#message {
+    width: 30vw;
+    height: 20vh;
+}
+
+label {
+ font-weight: bold;
+}
+
+input[type=text] {
+    margin-top: 1em;
+    border: 2px solid rgb(214, 223, 90, 0.4);
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 5px;
+}
+
+#email {
+    width: 30vw;
+}
+
+input[type=text]:hover {
+    margin-top: 1em;
+    border: 2px solid rgb(214, 223, 90, 0.7);
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    background-color: rgb(255, 255, 255,0.7);
+    border: 2px solid rgb(214, 223, 90, 0.4);
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 1px;
+    margin-bottom: 20px;
+    width: 140px;
+    transition: .7s;
+    font-size: 14px;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    border-width: 2px;
+    border: 2px solid rgb(214, 223, 90, 0.4);
+    font-weight: bold;
+    transform: scale(1.05);
+    cursor: pointer;
+}

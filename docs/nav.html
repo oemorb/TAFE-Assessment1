@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylev2.css">
     <title>Navigation</title>
-    <script>
-const current = 0;
-for (var i = 0; i < document.links.length; i++) {
-    if (document.links[i].href === document.URL) {
-        current = i;
-    }
-}
-document.links[current].className = 'current';
-    </script>
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
 </head>
 <body>
     <nav>
             <ul class="content">
-            <li><a href='index.html'><img class='logo' src="/images/sorrento_by_the_sea_logo.jpg"></li> 
+            <li><a href='index.html'><img class='logo' src="images/sorrento_by_the_sea_logo.jpg"></a></li> 
             <div id="links">
-            <li><a href='companyinfo.html'>Company Information</li>        
-            <li><a href='theapartment.html'>The Apartment</li>
-            <li><a href='contact.html#directions'>Directions</li>
-            <li><a href='local.html'>Local</li>
-            <li><a href='fees.html'>Fees</li>
-            <li><a href='testimonials.html'>Testimonials</li>
-            <li><a href='contact.html'>Contact</li>
+
+            <li><a href='companyinfo.html'>Company Information</a></li>        
+            <li><a href='theapartment.html'>The Apartment</a></li>
+            <li><a href='contact.html#directions'>Directions</a></li>
+            <li><a href='local.html'>Local</a></li>
+            <li><a href='fees.html'>Fees</a></li>
+            <li><a href='testimonials.html'>Testimonials</a></li>
+            <li><a href='contact.html'>Contact</a></li>
             </div>
             </ul>
         </div>
