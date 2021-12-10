@@ -9,6 +9,8 @@
     align-items: center;
     margin: -1em -1em;
     padding: 0.5em 1em;
+    max-width: 100%;
+    overflow-x: hidden
 }
 
 nav #links {
@@ -17,7 +19,7 @@ nav #links {
     align-items: center;
     justify-content: space-between;
     width: 60vw;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 .logo {
@@ -50,18 +52,24 @@ nav #links {
     font-weight: bold;
 }
 
-
+.dropdown {
+    display: none;
+}
 
 /* --------------------------------- FOOTER --------------------------------- */
 .footer {
         display: flex;
         flex-direction: row;
         background-color: rgb(102,47,45, 0.3);
-        padding: 0.5em 0;
         justify-content: space-between;
         list-style-type: none;
         align-items: center;
         margin: 0.5em -1em -1em -1em;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 0.5em 1em;
+        bottom: 0;
+        position: relative;
 }
 
 .footerlinks {
@@ -118,13 +126,19 @@ font-size: 24px;
 
 body {
     background-color: #C7BFB5;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100%;
 }
 
 main {
     padding: 0 1em;
     background-color: rgb(255, 255, 255, 0.2);
-    margin: auto;
+    margin: 0em;
+    min-height: 78vh;
     padding-bottom: 20px;
+    
 }
 
 /* -------------------------------- HOMEPAGE -------------------------------- */
@@ -174,6 +188,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    grid-gap: 10px
 }
 
 .localpage {
@@ -185,6 +200,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    grid-gap: 10px
 }
 
 
@@ -258,6 +274,8 @@ main {
 .apartmenttext img {
     margin: auto;
     border-radius: 10px;
+    max-width: 100%;
+    object-fit: fit;
 }
 
 /* -------------------------- LOCAL ACTIVITIES PAGE ------------------------- */
@@ -309,7 +327,7 @@ main {
     object-fit: fit;
     border-radius: 10px;
     margin: auto;
-    width: 500px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -394,11 +412,12 @@ table, tr, td {
 
 .testpic {
     width: 95vw;
+    object-fit: contain;
     height: auto;
     margin: auto;
     display: block;
     border-radius: 10px;
-    padding-bottom: 10px;
+
 }
 
 .testimonials p  {
@@ -428,8 +447,7 @@ font-size:40px;
     font-size:40px;
     }
 
-    
-/* ----------------------------- CONTACT US PAGE ---------------------------- */
+/* ----------------------------- CONTACT US/DIRECTION PAGE ---------------------------- */
 
 .contact {
     display: flex;
@@ -496,4 +514,146 @@ input[type=submit]:hover {
     font-weight: bold;
     transform: scale(1.05);
     cursor: pointer;
+}
+
+
+/* ------------------------------ MEDIA SUPPORT ----------------------------- */
+
+@media only screen and (max-width: 800px) {
+    .apartmenttext, .localtext, .aboutus, .contact, .gettinghere, .feepage, .hometext  {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* ------------------------------ LAYOUT MOBILE ----------------------------- */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+      body, main {
+        overflow-x: hidden;
+        position: relative
+      }
+
+      main {
+          margin-top: 15px;
+      }
+    /* --------------------------------- NAVBAR MOBILE --------------------------------- */
+    .dropbtn {
+        background-color: rgb(255, 255, 255,0.7);
+        color: #4d1d18;;
+        font-weight: bold;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 2px solid rgb(214, 223, 90, 0.2);
+        display: flex;
+        display:block;
+        width: 90vw;
+        height: auto;
+    
+      }
+    
+      .logodropdown {
+          display: flex;
+          object-fit: contain;
+          max-width: 90vw;
+          padding: 20px 0;
+          margin: auto;
+          height: auto;
+          
+      }
+            
+      .dropdown {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(144, 192, 130, 0.2);
+        justify-content: center;
+        align-items: center;
+        margin-top: -1;
+        padding: 0.5em 1em;
+        max-width: 98vw;
+        height: auto;
+      }
+
+      
+      .dropdown-content {
+        display: none;
+        position: inherit;
+        max-width: 90vw;
+        border-radius: 10px;
+        z-index: 1;
+
+      }
+      
+      .dropdown-content a {
+        display: flex;
+        color: #4d1d18;
+        text-decoration: none;
+        text-align: center;
+        padding: 12px 16px;
+        display: block;
+      }
+            
+     .show {
+         display:block;
+         }
+        
+    .regularnav {
+        display: none;
+    }
+
+    /* ------------------------------- FOOTER MOBILE ------------------------------- */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .footerlinks {
+        text-align: center;
+        margin: auto;
+    }
+
+
+    .footericons {
+        display: flex;
+        padding: 15px 0;
+        justify-content: space-between;
+        margin: auto;
+
+    }
+    /* ----------------------------- HOMEPAGE MOBILE ---------------------------- */
+    .hometext {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --------------------------- COMPANY INFO MOBILE -------------------------- */
+    .aboutus img
+    {
+        object-fit: scale-down;
+        max-width: 100%;
+        height: auto
+    }
+
+    /* ------------------------ TESTIMONIALS PAGE MOBILE ------------------------ */
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        object-fit: scale-down;
+        max-width: 100%;
+        height: auto
+    }
+    /* ----------------------------- CONTACT US/DIRECTION PAGE ---------------------------- */
+    .contact, .contact1 p {
+        text-align: center;
+    }
+
+    #message, #email {
+        width: 80vw;
+    }
 }

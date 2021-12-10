@@ -17,23 +17,54 @@
         });
     });
 </script>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </head>
-<body>
     <nav>
+            <div class='regularnav'>
             <ul class="content">
             <li><a href='index.html'><img class='logo' src="images/sorrento_by_the_sea_logo.jpg"></a></li> 
             <div id="links">
-
-            <li><a href='companyinfo.html'>Company Information</a></li>        
-            <li><a href='theapartment.html'>The Apartment</a></li>
-            <li><a href='contact.html#directions'>Directions</a></li>
-            <li><a href='local.html'>Local</a></li>
-            <li><a href='fees.html'>Fees</a></li>
-            <li><a href='testimonials.html'>Testimonials</a></li>
-            <li><a href='contact.html'>Contact</a></li>
-            </div>
+                <li><a href='companyinfo.html'>Company Information</a></li>        
+                <li><a href='theapartment.html'>The Apartment</a></li>
+                <li><a href='contact.html#directions'>Directions</a></li>
+                <li><a href='local.html'>Local</a></li>
+                <li><a href='fees.html'>Fees</a></li>
+                <li><a href='testimonials.html'>Testimonials</a></li>
+                <li><a href='contact.html'>Contact</a></li>
             </ul>
-        </div>
+            </div>
+            <div class="dropdown">
+                <a href='index.html'><img class='logodropdown' src="images/sorrento_by_the_sea_logo.jpg"></a> 
+                <button onclick="myFunction()" class="dropbtn">Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href='companyinfo.html'>Company Information</a>        
+                    <a href='theapartment.html'>The Apartment</a>
+                    <a href='contact.html#directions'>Directions</a>
+                    <a href='local.html'>Local</a>
+                    <a href='fees.html'>Fees</a>
+                    <a href='testimonials.html'>Testimonials</a>
+                    <a href='contact.html'>Contact</a>
+                </div>
+              </div>
+               
     </nav> 
-</body>
 </html>
