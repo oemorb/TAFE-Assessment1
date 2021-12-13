@@ -164,7 +164,6 @@ main {
     padding-left: 1em;
     border-radius: 10px;
     overflow: hidden ;
-    
 }
 
 .hometext div:hover {
@@ -179,7 +178,7 @@ main {
     color: black;
 }
 
-.testimonials {
+.testim {
     grid-area: c;
 }
 
@@ -218,11 +217,15 @@ main {
     grid-area: d;
 }
 
+.hometext p {
+    padding-right: 1em;
+    text-align: left;
+}
 /* HOMEPAGE IMAGES */
 
 
 .hometext img {
-    object-fit: cover;
+    object-fit: fill;
     width: 300px;
     height: auto;
 }
@@ -636,7 +639,7 @@ input[type=submit]:hover {
         object-fit: scale-down;
         max-width: 100%;
         height: auto
-    }`
+    }
 
     /* ---------------------------- FEES PAGE MOBILE ---------------------------- */
     .season {
