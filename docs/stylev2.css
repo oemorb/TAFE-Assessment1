@@ -526,7 +526,7 @@ input[type=submit]:hover {
     }
     
     /* ------------------------------ LAYOUT MOBILE ----------------------------- */
-    html, body {
+    html, body, main, footer, nav {
         overflow-x: hidden;
         max-width: 100%;
       }
