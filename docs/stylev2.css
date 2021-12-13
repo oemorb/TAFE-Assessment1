@@ -500,7 +500,7 @@ input[type=submit]{
     border: 2px solid rgb(214, 223, 90, 0.4);
     border-radius: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 8px 1px;
+    padding: 12px 1px;
     margin-bottom: 20px;
     width: 140px;
     transition: .7s;
@@ -636,7 +636,7 @@ input[type=submit]:hover {
         object-fit: scale-down;
         max-width: 100%;
         height: auto
-    }
+    }`
 
     /* ---------------------------- FEES PAGE MOBILE ---------------------------- */
     .season {
@@ -670,9 +670,10 @@ input[type=submit]:hover {
         max-width: 100%;
         height: auto
     }
-    /* ----------------------------- CONTACT US/DIRECTION PAGE ---------------------------- */
+    /* ----------------------------- CONTACT US/DIRECTION PAGE MOBILE---------------------------- */
     .contact, .contact1 p {
         text-align: center;
+        text-decoration: none;
     }
 
     #message, #email {
