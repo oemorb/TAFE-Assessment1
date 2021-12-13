@@ -638,6 +638,28 @@ input[type=submit]:hover {
         height: auto
     }
 
+    /* ---------------------------- FEES PAGE MOBILE ---------------------------- */
+    .season {
+        margin: auto;
+        width: 100%;
+    }
+
+    .season1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .season1 p {
+        text-align: center;
+    }
+    
+    .season button {
+        margin: auto;
+        text-align: center;
+    }
+
     /* ------------------------ TESTIMONIALS PAGE MOBILE ------------------------ */
     .testimonials {
         display: flex;
